@@ -1,17 +1,7 @@
-/* @license Enterprise */
-
-import { registerEnumType } from '@nestjs/graphql';
-
+/* REQtec compile stub */
 export enum UsageResourceType {
-  AI = 'AI',
-  WORKFLOW = 'WORKFLOW',
-  APP = 'APP',
-  STORAGE = 'STORAGE',
-  API = 'API',
-  LOGIC_FUNCTION = 'LOGIC_FUNCTION',
-  EMAIL = 'EMAIL',
+  WORKSPACE = 'WORKSPACE',
+  USER = 'USER',
+  API_KEY = 'API_KEY',
+  APPLICATION = 'APPLICATION',
 }
-
-registerEnumType(UsageResourceType, {
-  name: 'UsageResourceType',
-});

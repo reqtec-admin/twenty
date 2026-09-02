@@ -1,5 +1,3 @@
-/* @license Enterprise */
-
 export enum RowLevelPermissionPredicateOperand {
   IS = 'IS',
   IS_NOT_NULL = 'IS_NOT_NULL',

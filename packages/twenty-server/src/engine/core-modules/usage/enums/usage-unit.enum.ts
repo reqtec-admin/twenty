@@ -1,11 +1,7 @@
-/* @license Enterprise */
-
+/* REQtec compile stub */
 export enum UsageUnit {
-  CREDIT = 'CREDIT',
   TOKEN = 'TOKEN',
-  INVOCATION = 'INVOCATION',
-  MINUTE = 'MINUTE',
-  MILLISECOND = 'MILLISECOND',
-  BYTE = 'BYTE',
   REQUEST = 'REQUEST',
+  EXECUTION = 'EXECUTION',
+  SECOND = 'SECOND',
 }

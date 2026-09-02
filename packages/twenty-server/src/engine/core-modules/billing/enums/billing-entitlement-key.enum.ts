@@ -1,5 +1,4 @@
-/* @license Enterprise */
-
+/* REQtec compile stub */
 export enum BillingEntitlementKey {
   SSO = 'SSO',
   CUSTOM_DOMAIN = 'CUSTOM_DOMAIN',

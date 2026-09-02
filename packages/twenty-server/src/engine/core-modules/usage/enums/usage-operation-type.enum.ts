@@ -1,7 +1,4 @@
-/* @license Enterprise */
-
-import { registerEnumType } from '@nestjs/graphql';
-
+/* REQtec compile stub */
 export enum UsageOperationType {
   AI_CHAT_TOKEN = 'AI_CHAT_TOKEN',
   AI_WORKFLOW_TOKEN = 'AI_WORKFLOW_TOKEN',
@@ -12,7 +9,3 @@ export enum UsageOperationType {
   EMAIL_SEND = 'EMAIL_SEND',
   API_REQUEST = 'API_REQUEST',
 }
-
-registerEnumType(UsageOperationType, {
-  name: 'UsageOperationType',
-});

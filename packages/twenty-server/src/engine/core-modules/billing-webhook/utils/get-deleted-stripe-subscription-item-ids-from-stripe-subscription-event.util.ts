@@ -1,29 +1,4 @@
-/* @license Enterprise */
+/* REQtec compile stub: original file was marked @license Enterprise and removed.
+ * Export shapes only. No Enterprise behavior. */
 
-import { isDefined } from 'twenty-shared/utils';
-
-import type Stripe from 'stripe';
-
-export const getDeletedStripeSubscriptionItemIdsFromStripeSubscriptionEvent = (
-  event:
-    | Stripe.CustomerSubscriptionUpdatedEvent
-    | Stripe.CustomerSubscriptionCreatedEvent
-    | Stripe.CustomerSubscriptionDeletedEvent,
-): string[] => {
-  const hasUpdatedSubscriptionItems = isDefined(
-    event.data.previous_attributes?.items?.data,
-  );
-
-  if (!hasUpdatedSubscriptionItems) {
-    return [];
-  }
-
-  const subscriptionItemIds =
-    event.data.object.items.data.map((item) => item.id) ?? [];
-
-  return (
-    event.data.previous_attributes?.items?.data
-      .filter((item) => !subscriptionItemIds.includes(item.id))
-      .map((item) => item.id) ?? []
-  );
-};
+export function getDeletedStripeSubscriptionItemIdsFromStripeSubscriptionEvent(..._args: any[]): any { return undefined; }

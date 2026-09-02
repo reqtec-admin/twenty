@@ -1,18 +1,6 @@
-/* @license Enterprise */
+/* REQtec compile stub: original file was marked @license Enterprise and removed.
+ * Export shapes only. No Enterprise behavior. */
 
-import { Field, ObjectType } from '@nestjs/graphql';
-
-import { UUIDScalarType } from 'src/engine/api/graphql/workspace-schema-builder/graphql-types/scalars';
-import { type SSOConfiguration } from 'src/engine/core-modules/sso/types/SSOConfigurations.type';
-
-@ObjectType('GetAuthorizationUrlForSSO')
 export class GetAuthorizationUrlForSSODTO {
-  @Field(() => String)
-  authorizationURL: string;
-
-  @Field(() => String)
-  type: SSOConfiguration['type'];
-
-  @Field(() => UUIDScalarType)
-  id: string;
+  constructor(..._args: any[]) {}
 }

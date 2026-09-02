@@ -1,13 +1,5 @@
-/* @license Enterprise */
-
-import { registerEnumType } from '@nestjs/graphql';
-
+/* REQtec compile stub */
 export enum BillingUsageType {
   METERED = 'METERED',
   LICENSED = 'LICENSED',
 }
-
-registerEnumType(BillingUsageType, {
-  name: 'BillingUsageType',
-  description: 'The different billing usage types',
-});

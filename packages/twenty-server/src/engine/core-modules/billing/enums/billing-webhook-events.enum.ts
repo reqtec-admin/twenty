@@ -1,5 +1,4 @@
-/* @license Enterprise */
-
+/* REQtec compile stub */
 export enum BillingWebhookEvent {
   CUSTOMER_SUBSCRIPTION_CREATED = 'customer.subscription.created',
   CUSTOMER_SUBSCRIPTION_UPDATED = 'customer.subscription.updated',

@@ -1,5 +1,3 @@
-/* @license Enterprise */
-
 import { type RowLevelPermissionPredicateOperand } from '@/types/RowLevelPermissionPredicateOperand';
 import { type RowLevelPermissionPredicateValue } from '@/types/RowLevelPermissionPredicateValue';
 
