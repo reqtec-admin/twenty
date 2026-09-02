@@ -1,0 +1,4 @@
+/* REQtec compile stub: original file was marked @license Enterprise and removed.
+ * Export shapes only. No Enterprise behavior. */
+
+export function getDeletedStripeSubscriptionItemIdsFromStripeSubscriptionEvent(..._args: any[]): any { return undefined; }
