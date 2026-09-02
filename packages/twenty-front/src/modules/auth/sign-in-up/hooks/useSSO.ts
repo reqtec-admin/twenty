@@ -3,6 +3,12 @@ import { useRedirect } from '@/domain-manager/hooks/useRedirect';
 import { useSnackBar } from '@/ui/feedback/snack-bar-manager/hooks/useSnackBar';
 import { useMutation } from '@apollo/client/react';
 
+type GetAuthorizationUrlForSSOData = {
+  getAuthorizationUrlForSSO?: {
+    authorizationURL?: string;
+  };
+};
+
 export const useSSO = () => {
   const { redirect } = useRedirect();
   const { enqueueErrorSnackBar } = useSnackBar();
@@ -24,8 +30,8 @@ export const useSSO = () => {
       return;
     }
 
-    const authorizationURL =
-      result.data?.getAuthorizationUrlForSSO?.authorizationURL;
+    const data = result.data as GetAuthorizationUrlForSSOData | undefined;
+    const authorizationURL = data?.getAuthorizationUrlForSSO?.authorizationURL;
 
     if (typeof authorizationURL === 'string') {
       redirect(authorizationURL);
