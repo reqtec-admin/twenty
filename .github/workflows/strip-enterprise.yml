@@ -1,0 +1,30 @@
+name: Strip Enterprise-licensed files
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - reqtec/agpl-keycloak
+
+jobs:
+  strip:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - name: Strip @license Enterprise files
+        run: bash scripts/strip-enterprise-files.sh
+      - name: Commit deletions if any
+        run: |
+          git config user.name "reqtec-admin"
+          git config user.email "reqtec-admin@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+          else
+            git commit -m "chore: remove @license Enterprise files"
+            git push
+          fi
