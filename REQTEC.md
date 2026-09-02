@@ -42,5 +42,12 @@ Required server gate is compile-only (`server-build`). Upstream jobs that
 assume Enterprise billing/SSO/RLS, marketplace apps, published GraphQL schema,
 preview infra, or Twenty-org secrets are `workflow_dispatch` only.
 
+Dispatch-only on this fork (do not run on push):
+
+- `cd-deploy-main.yaml` / `cd-deploy-tag.yaml` (twentyhq/twenty-infra)
+- `i18n-push.yaml` / `i18n-pull.yaml` / `docs-i18n-push.yaml` / `website-i18n-push.yaml`
+- `ci-ai-catalog-sync.yaml` / `ci-dpa-subprocessors-sync.yaml`
+- visual-regression / preview-env / website-preview / pr-review dispatch stubs
+
 Kept on pull request: CI Shared, CI Server (build), CI SDK (unit/lint/typecheck),
 CI UI, CI Front, CI Docs, docker/emails/utils when they skip cleanly.
