@@ -4,13 +4,16 @@ Internal self-hosted CRM (reqtec-hq). No product rebrand.
 
 ## What this branch does
 
-- `reqtec/agpl-keycloak` adds a clean-room Keycloak OIDC login module under
+- Clean-room Keycloak OIDC login lives under
   `packages/twenty-server/src/engine/core-modules/reqtec-keycloak/`.
 - Files whose **first line** is `/* @license Enterprise */` were removed.
 - Compile-only stubs replace deleted Enterprise modules so the AGPL tree
   typechecks. Stubs export names/shapes only and contain no Enterprise logic.
 - MIT `twenty-shared` RLS types were restored **without** the Enterprise header
   (type shapes required by `ObjectPermissions` / role manifests).
+- Front stubs cover stripped SSO settings, RLS predicate hooks, and the
+  custom-domain page so `twenty-front` typechecks. They render nothing and
+  apply no row-level filters.
 
 ## Keycloak
 
