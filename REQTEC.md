@@ -32,3 +32,12 @@ Users must already exist in Twenty (email match) unless JIT is enabled.
 exactly `/* @license Enterprise */`. It never touches `LICENSE`, `REQTEC.md`,
 or this script. Do not grep the phrase anywhere in the file — that previously
 deleted `LICENSE` and this document.
+
+## CI on this fork
+
+Required server gate is compile-only (`server-build`). Upstream jobs that
+assume Enterprise billing/SSO/RLS, marketplace apps, published GraphQL schema,
+preview infra, or Twenty-org secrets are `workflow_dispatch` only.
+
+Kept on pull request: CI Shared, CI Server (build), CI SDK (unit/lint/typecheck),
+CI UI, CI Front, CI Docs, docker/emails/utils when they skip cleanly.
